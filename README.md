@@ -1,5 +1,5 @@
 # AARPG PROJECT
-This is a basic AARPG project I made following [Michael Games'](https://www.youtube.com/@MichaelGamesOfficial) tutorials, usign his free assets as well
+This is a basic AARPG project I'm working on following [Michael Games'](https://www.youtube.com/@MichaelGamesOfficial) tutorials, usign his free assets as well. My objective is to learn the implementations of basic mechanics in Godot so I can start my own project.
 
 ## Mechanics
 The mechanics I have implemented so far are:
