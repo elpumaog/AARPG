@@ -1,5 +1,5 @@
 # AARPG PROJECT
-This is a basic AARPG project I made following Michael Games' (https://www.youtube.com/@MichaelGamesOfficial) tutorials, usign his free assets as well
+This is a basic AARPG project I made following [Michael Games'](https://www.youtube.com/@MichaelGamesOfficial) tutorials, usign his free assets as well
 
 ## Mechanics
 The mechanics I have implemented so far are:
