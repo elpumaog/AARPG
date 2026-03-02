@@ -134,7 +134,6 @@ offset_right = -31.0
 offset_bottom = 169.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 10
-text = "A valuable gem that you can use to trade in objects"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -145,3 +144,6 @@ offset_top = 14.0
 offset_right = 160.0
 offset_bottom = 37.0
 text = "INVENTORY"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+max_polyphony = 4

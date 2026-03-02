@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://vxqb5okfqr6d"]
+[gd_scene load_steps=6 format=3 uid="uid://vxqb5okfqr6d"]
 
 [ext_resource type="Script" uid="uid://b6suqxuq1utor" path="res://Levels/scripts/level.gd" id="1_63iu3"]
 [ext_resource type="PackedScene" uid="uid://cqelt40swjn21" path="res://Tilemaps/grass-01.tscn" id="2_oykgd"]
 [ext_resource type="PackedScene" uid="uid://bn6m1d1rmbcu5" path="res://Levels/player_spawn.tscn" id="3_kr28r"]
 [ext_resource type="PackedScene" uid="uid://c325f2ae47ebh" path="res://Levels/level_transition.tscn" id="4_d0id7"]
+[ext_resource type="PackedScene" uid="uid://bie6t3a1giyey" path="res://Enemies/Goblin/goblin.tscn" id="5_oykgd"]
 
 [node name="04" type="Node2D"]
 script = ExtResource("1_63iu3")
@@ -26,3 +27,6 @@ position = Vector2(-128, 160)
 level = "uid://dqxl4xm2m55i6"
 target_transition_area = "LevelTransition2"
 size = 4
+
+[node name="Goblin" parent="." instance=ExtResource("5_oykgd")]
+position = Vector2(440, 166)

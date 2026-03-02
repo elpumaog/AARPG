@@ -63,5 +63,5 @@ func _take_damage(hurt_box: HurtBox) -> void:
 	hp -= hurt_box.damage
 	if hp > 0:
 		enemy_damaged.emit(hurt_box)
-	else:
+	elif hp <= 0:
 		enemy_destroyed.emit(hurt_box)
