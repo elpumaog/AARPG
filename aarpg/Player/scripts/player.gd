@@ -13,6 +13,7 @@ var max_hp: int = 6
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var state_machine: PlayerStateMachine = $StateMachine
 @onready var hit_box: HitBox = $HitBox
+@onready var audio: AudioStreamPlayer2D = $Audio/AudioStreamPlayer2D
 
 signal DirectionChanged(new_direction: Vector2)
 signal player_damaged(hurt_box: HurtBox)

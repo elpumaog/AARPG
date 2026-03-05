@@ -787,6 +787,7 @@ _data = {
 collision_layer = 256
 collision_mask = 16
 script = ExtResource("1_f3wku")
+hp = 2
 
 [node name="HurtBox" parent="." instance=ExtResource("2_lvhkj")]
 position = Vector2(0, -6)
