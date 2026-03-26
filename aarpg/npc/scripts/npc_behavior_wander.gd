@@ -17,7 +17,7 @@ func _ready() -> void:
 	$CollisionShape2D.queue_free()
 	original_position = npc.global_position
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 	
@@ -36,6 +36,8 @@ func start() -> void:
 	npc.velocity = Vector2.ZERO
 	npc.update_animation()
 	await get_tree().create_timer(randf() * idle_duration + idle_duration * 0.5).timeout
+	if npc.do_behavior == false:
+		return
 	
 	# WALK PHASE
 	npc.state = "walk"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dqxl4xm2m55i6"]
+[gd_scene load_steps=15 format=3 uid="uid://dqxl4xm2m55i6"]
 
 [ext_resource type="Script" uid="uid://b6suqxuq1utor" path="res://Levels/scripts/level.gd" id="1_22ele"]
 [ext_resource type="PackedScene" uid="uid://cqelt40swjn21" path="res://Tilemaps/grass-01.tscn" id="1_vbl6q"]
@@ -9,8 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://k14lanhf3no4" path="res://npc/npc_behavior_wander.tscn" id="7_th3kk"]
 [ext_resource type="PackedScene" uid="uid://dvhdmorcq4463" path="res://npc/npc.tscn" id="7_xhij5"]
 [ext_resource type="Resource" uid="uid://v30ayv8qjfae" path="res://npc/00_npcs/npc_02.tres" id="9_b60gt"]
+[ext_resource type="PackedScene" uid="uid://kbueimpqguvt" path="res://Interactables/dialog/dialog_interaction.tscn" id="9_c2gse"]
 [ext_resource type="PackedScene" uid="uid://dnu2e7srrpr5n" path="res://npc/npc_behavior_patrol.tscn" id="10_f2d14"]
+[ext_resource type="Script" uid="uid://bkmgjc5eh7uo4" path="res://Interactables/dialog/scripts/dialog_text.gd" id="10_uv5ft"]
 [ext_resource type="PackedScene" uid="uid://d31ayrd2auxyg" path="res://npc/patrol_location.tscn" id="11_an23e"]
+[ext_resource type="Resource" uid="uid://bdab7nbe1rl0i" path="res://npc/00_npcs/00_hero.tres" id="11_qqqph"]
 
 [node name="01" type="Node2D"]
 script = ExtResource("1_22ele")
@@ -47,6 +50,27 @@ npc_resource = ExtResource("7_b60gt")
 
 [node name="NpcBehaviorWander" parent="NPC" instance=ExtResource("7_th3kk")]
 
+[node name="DialogInteraction" parent="NPC" instance=ExtResource("9_c2gse")]
+enabled = true
+
+[node name="DialogText" type="Node" parent="NPC/DialogInteraction"]
+script = ExtResource("10_uv5ft")
+text = "Hi hero, is that you?"
+npc_info = ExtResource("7_b60gt")
+metadata/_custom_type_script = "uid://bkmgjc5eh7uo4"
+
+[node name="DialogText2" type="Node" parent="NPC/DialogInteraction"]
+script = ExtResource("10_uv5ft")
+text = "Hola [wave]soy yo[/wave]"
+npc_info = ExtResource("11_qqqph")
+metadata/_custom_type_script = "uid://bkmgjc5eh7uo4"
+
+[node name="DialogText3" type="Node" parent="NPC/DialogInteraction"]
+script = ExtResource("10_uv5ft")
+text = "Firmame un [shake]autografo[/shake] porfa!"
+npc_info = ExtResource("7_b60gt")
+metadata/_custom_type_script = "uid://bkmgjc5eh7uo4"
+
 [node name="NPC2" parent="." instance=ExtResource("7_xhij5")]
 position = Vector2(95, 182)
 npc_resource = ExtResource("9_b60gt")
@@ -66,3 +90,24 @@ wait_time = 1.0
 modulate = Color(0, 1, 0, 1)
 position = Vector2(-47, 77)
 wait_time = 5.0
+
+[node name="DialogInteraction" parent="NPC2" instance=ExtResource("9_c2gse")]
+enabled = true
+
+[node name="DialogText" type="Node" parent="NPC2/DialogInteraction"]
+script = ExtResource("10_uv5ft")
+text = "Como estas Hero?"
+npc_info = ExtResource("9_b60gt")
+metadata/_custom_type_script = "uid://bkmgjc5eh7uo4"
+
+[node name="DialogText2" type="Node" parent="NPC2/DialogInteraction"]
+script = ExtResource("10_uv5ft")
+text = "Todo bien jefe, y tu?"
+npc_info = ExtResource("11_qqqph")
+metadata/_custom_type_script = "uid://bkmgjc5eh7uo4"
+
+[node name="DialogText3" type="Node" parent="NPC2/DialogInteraction"]
+script = ExtResource("10_uv5ft")
+text = "Todo guay todo guay"
+npc_info = ExtResource("9_b60gt")
+metadata/_custom_type_script = "uid://bkmgjc5eh7uo4"
